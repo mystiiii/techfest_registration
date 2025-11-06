@@ -14,3 +14,6 @@ for i in range(noPartic):
         "Name": pName,
         "Track": pTrack,
     }
+print(f"Registered participants")
+for i in range(len(dict)):
+    print(f"{i+1}. {dict[f'Partcipant{i+1}']['Name']} - {dict[f'Partcipant{i+1}']['Track']}")
