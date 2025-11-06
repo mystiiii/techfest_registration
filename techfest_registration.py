@@ -2,6 +2,7 @@ allNames = []
 dict = {}
 names = set({})
 tracks = set({})
+perTrack = {}
 
 print("Welcome to SMIT TechFest!")
 print("Event organized by Lei Villacorta of APPDAET BTCS2\n")
@@ -47,3 +48,13 @@ else:
     print("No duplicate names.")
 
 print("\nParticipants per Track:")
+for participant_id in dict:
+    track_name = dict[participant_id]['Track']
+
+    if track_name in perTrack:
+        perTrack[track_name] += 1
+    else:
+        perTrack[track_name] = 1
+
+for track_name, count in perTrack.items():
+    print(f"{track_name}: {count}")
